@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.0" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="StarUML" exporterVersion="2.0"/>
+	<uml:Model xmi:id="AAAAAAFRD1ozZhO9Fuw=" xmi:type="uml:Model" name="RootModel">
+		<packagedElement xmi:id="AAAAAAFQ8G+hojAzyRI=" name="Model1" visibility="public" xmi:type="uml:Model">
+			<packagedElement xmi:id="AAAAAAFQ8HFzEDDWFvw=" name="易信App登陆页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedAttribute xmi:id="AAAAAAFQ8HGmQzEAS0Y=" name="帐号输入框" visibility="public" isStatic="false" isLeaf="false" type="输入框_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false">
+					<xmi:Extension extender="StarUML">
+						<documentation value="xpath=8wojegiowjgioiwje"/>
+					</xmi:Extension>
+				</ownedAttribute>
+				<ownedAttribute xmi:id="AAAAAAFQ8HHFcDEHJKQ=" name="密码输入框" visibility="public" isStatic="false" isLeaf="false" type="输入框_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ8J1j88Nucfw=" name="登陆按钮" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ8I6St8M4XL4=" name="登入易信App" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="# 步骤
+* Input Text 输入框-帐号 *{帐号}*
+* Input Text 输入框-密码 *{密码}*
+* click 按钮-登陆"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ8J4PFcN2kJA=" name="帐号" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+					<ownedParameter xmi:id="AAAAAAFQ8J5me8N6BPA=" name="密码" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+					<ownedParameter xmi:id="AAAAAAFQ9R5q2U3AyrQ=" name="返回值" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IWcifdcMQo=" name="抽象_易信页" visibility="public" isAbstract="true" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ8Ikn4fjLj9A=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ8IWcifdcMQo=" supplier="AAAAAAFQ8HFzEDDWFvw="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IW6EfeGsdw=" name="易信_消息页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedAttribute xmi:id="AAAAAAFQ9SuuaU4A75Y=" name="消息列表" visibility="public" isStatic="false" isLeaf="false" type="列表<消息项>_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9W2LoFJoQG8=" name="消息" visibility="public" isStatic="false" isLeaf="false" type="标签_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9W27CVJvJgY=" name="电话" visibility="public" isStatic="false" isLeaf="false" type="标签_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9W3R0lJ2NAg=" name="发现" visibility="public" isStatic="false" isLeaf="false" type="标签_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9W33O1J9kxs=" name="好友" visibility="public" isStatic="false" isLeaf="false" type="标签_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9W4KUVKE2aY=" name="我" visibility="public" isStatic="false" isLeaf="false" type="标签_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ9R4HR025N7I=" name="进入指定标签页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="# 步骤
+* click 标签-{标签名}
+# 合法参数值
+* 标签名: 消息/电话/发现/好友/我"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9SKqLk3r0EM=" name="电话页" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+					<ownedParameter xmi:id="AAAAAAFRDua9LAz/KhU=" name="标签名" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<ownedOperation xmi:id="AAAAAAFQ9SEaOE3bkX8=" name="进入公众号列表_会话页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="* click 消息项-公众号"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9SQMsE37sFM=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<generalization xmi:id="AAAAAAFQ8IfQ+vfMsuE=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ8IW6EfeGsdw=" general="AAAAAAFQ8IWcifdcMQo="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IfucffdHyw=" name="易信_电话页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<generalization xmi:id="AAAAAAFQ8Ih2KfiFGZ8=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ8IfucffdHyw=" general="AAAAAAFQ8IWcifdcMQo="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IgbSvgHHQg=" name="易信_发现页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedOperation xmi:id="AAAAAAFQ9T+RgFE/f6Q=" name="进入朋友圈" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<ownedParameter xmi:id="AAAAAAFQ9T/VZlFH8a8=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<generalization xmi:id="AAAAAAFQ8IiSMfiW4yQ=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ8IgbSvgHHQg=" general="AAAAAAFQ8IWcifdcMQo="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IhBIfgxi3A=" name="易信_好友页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedOperation xmi:id="AAAAAAFQ9T6nv1EkJWY=" name="进入公众号页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<ownedParameter xmi:id="AAAAAAFQ9T7oclErlMA=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<generalization xmi:id="AAAAAAFQ8Iin0vins5c=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ8IhBIfgxi3A=" general="AAAAAAFQ8IWcifdcMQo="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ8IhYYPhbxvQ=" name="易信_我页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<generalization xmi:id="AAAAAAFQ8Ii1Y/i40UU=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ8IhYYPhbxvQ=" general="AAAAAAFQ8IWcifdcMQo="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9S091U4HvOQ=" name="公众号页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false"/>
+			<packagedElement xmi:id="AAAAAAFQ9TErdk8MBkI=" name="抽象_公众号页" visibility="public" isAbstract="true" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ9TjHH1AFhzg=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9TErdk8MBkI=" supplier="AAAAAAFQ8IW6EfeGsdw="/>
+				<ownedMember xmi:id="AAAAAAFQ9T8USVEuWaE=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9TErdk8MBkI=" supplier="AAAAAAFQ8IhBIfgxi3A="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9Tj/1lAWJJY=" name="公众号_会话页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedAttribute xmi:id="AAAAAAFQ9Tr/aFDSA3M=" name="公众号列表" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ9Tp4cVDIzo4=" name="进入公众号聊天页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<ownedParameter xmi:id="AAAAAAFQ9TqvX1DPSDs=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<generalization xmi:id="AAAAAAFQ9TmhP1CU/7E=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ9Tj/1lAWJJY=" general="AAAAAAFQ9TErdk8MBkI="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9TknKVBAz/I=" name="公众号_精选页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<generalization xmi:id="AAAAAAFQ9Tm7v1ClWeI=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ9TknKVBAz/I=" general="AAAAAAFQ9TErdk8MBkI="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9TlQ9lBqiDw=" name="公众号_分类页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<xmi:Extension extender="StarUML">
+					<documentation value="click"/>
+				</xmi:Extension>
+				<ownedAttribute xmi:id="AAAAAAFQ9UKGKFGaURQ=" name="分类标签条" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9ULF6VGhK+M=" name="公众号列表" visibility="public" isStatic="false" isLeaf="false" type="列表<公众号项>_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UGAwFGHG2s=" name="切换分类标签" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UNBgVGpcdc=" name="进入公众号名片页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="* click 公众号项-{公众号名称}"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9UOF+lGxVP4=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+					<ownedParameter xmi:id="AAAAAAFQ9ZSJKVNMjDw=" name="公众号名称" visibility="public" isStatic="false" isLeaf="false" isReadOnly="false" isOrdered="false" isUnique="false" direction="in" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<ownedOperation xmi:id="AAAAAAFQ9ZFaslM9YF8=" name="获取已关注公众号的个数" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="click 标签-已关注
+get 公众号列表中公众号的个数"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9ZGs5VNEGTs=" visibility="public" isStatic="false" isLeaf="false" type="数字_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<generalization xmi:id="AAAAAAFQ9TnP6FC2emg=" visibility="public" xmi:type="uml:Generalization" specific="AAAAAAFQ9TlQ9lBqiDw=" general="AAAAAAFQ9TErdk8MBkI="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9TzweFDbDMI=" name="公众号聊天页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ9T3vP1ETBpo=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9TzweFDbDMI=" supplier="AAAAAAFQ9Tj/1lAWJJY="/>
+				<ownedMember xmi:id="AAAAAAFQ9Yuo71MHHnU=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9TzweFDbDMI=" supplier="AAAAAAFQ9UOWCFGz/ck="/>
+				<ownedAttribute xmi:id="AAAAAAFQ9XJT9lKi6VM=" name="左上角返回按钮" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9XHJH1KbATk=" name="右上角菜单按钮" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ9T0oOFEFw54=" name="发送文本消息" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation"/>
+				<ownedOperation xmi:id="AAAAAAFQ9T17OVEMaHY=" name="点击图文消息" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UQDV1Hukic=" name="进入公众号名片页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="* click 按钮-右上角菜单"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9URUiVH1jGM=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9T/oNVFKkC0=" name="朋友圈" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ9UBCl1F1U7A=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9T/oNVFKkC0=" supplier="AAAAAAFQ8IgbSvgHHQg="/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9UOWCFGz/ck=" name="公众号名片页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ9UPMkFHdUqM=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9UOWCFGz/ck=" supplier="AAAAAAFQ9TlQ9lBqiDw="/>
+				<ownedMember xmi:id="AAAAAAFQ9UR5JlH3+A4=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9UOWCFGz/ck=" supplier="AAAAAAFQ9TzweFDbDMI="/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Y1jCFMZCF8=" name="左上角返回按钮" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Y3IN1Mpzjc=" name="右上角菜单按钮" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9UmE31I3Tl8=" name="头像" visibility="public" isStatic="false" isLeaf="false" type="图片_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Unaa1I+dWc=" name="名称" visibility="public" isStatic="false" isLeaf="false" type="文本_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9UnvyFJFv9M=" name="易信号" visibility="public" isStatic="false" isLeaf="false" type="文本_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Uo0LlJMVTE=" name="认证信息" visibility="public" isStatic="false" isLeaf="false" type="文本_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9YhXsFLq6qQ=" name="公众号主页" visibility="public" isStatic="false" isLeaf="false" type="列表项_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Ux3H1JWgwY=" name="查看历史消息" visibility="public" isStatic="false" isLeaf="false" type="列表项_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9YjmF1LyxcU=" name="接收推送消息" visibility="public" isStatic="false" isLeaf="false" type="开关按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9YnkV1L56DU=" name="在消息列表展示消息" visibility="public" isStatic="false" isLeaf="false" type="开关按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9ccfY1Umsoo=" name="授权设置" visibility="public" isStatic="false" isLeaf="false" type="列表项_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedAttribute xmi:id="AAAAAAFQ9Yop8FMAKUk=" name="查看消息" visibility="public" isStatic="false" isLeaf="false" type="按钮_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UX42FIIc6k=" name="进入查看历史消息页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="* click 按钮-查看历史消息"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9UaDulIP0bE=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter"/>
+				</ownedOperation>
+				<ownedOperation xmi:id="AAAAAAFQ9UaFRFIRQNw=" name="设置是否接受推送消息" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UbB0VIY6X0=" name="设置是否在消息列表展示消息" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation"/>
+				<ownedOperation xmi:id="AAAAAAFQ9UcCpFIfxfY=" name="进入公众号聊天页" visibility="public" isStatic="false" isLeaf="false" concurrency="sequential" isQuery="false" isAbstract="false" xmi:type="uml:Operation">
+					<xmi:Extension extender="StarUML">
+						<documentation value="* click 按钮-查看消息"/>
+					</xmi:Extension>
+					<ownedParameter xmi:id="AAAAAAFQ9UdrjlIn6ng=" visibility="public" isStatic="false" isLeaf="false" type="页面_id" isReadOnly="false" isOrdered="false" isUnique="false" direction="return" xmi:type="uml:Parameter">
+						<xmi:Extension extender="StarUML">
+							<documentation value="* click 按钮-查看消息"/>
+						</xmi:Extension>
+					</ownedParameter>
+				</ownedOperation>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9bkpx1Sth+g=" name="查看历史消息页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false">
+				<ownedMember xmi:id="AAAAAAFQ9bp3nVTZxJY=" visibility="public" xmi:type="uml:Dependency" client="AAAAAAFQ9bkpx1Sth+g=" supplier="AAAAAAFQ9UOWCFGz/ck="/>
+				<ownedAttribute xmi:id="AAAAAAFQ9bxHmlTrc48=" name="历史消息" visibility="public" isStatic="false" isLeaf="false" type="滚动视图_id" isReadOnly="false" isOrdered="false" isUnique="false" xmi:type="uml:Property" aggregation="none" isDerived="false" isID="false"/>
+			</packagedElement>
+			<packagedElement xmi:id="AAAAAAFQ9b0swFTzTzc=" name="公众号主页" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false"/>
+			<packagedElement xmi:id="AAAAAAFRDiOonMkHwvw=" name="Class1" visibility="public" isAbstract="false" isFinalSpecialization="false" isLeaf="false" xmi:type="uml:Class" isActive="false"/>
+		</packagedElement>
+		<packagedElement xmi:id="输入框_id" xmi:type="uml:DataType" name="输入框"/>
+		<packagedElement xmi:id="按钮_id" xmi:type="uml:DataType" name="按钮"/>
+		<packagedElement xmi:id="页面_id" xmi:type="uml:DataType" name="页面"/>
+		<packagedElement xmi:id="列表<消息项>_id" xmi:type="uml:DataType" name="列表<消息项>"/>
+		<packagedElement xmi:id="标签_id" xmi:type="uml:DataType" name="标签"/>
+		<packagedElement xmi:id="列表<公众号项>_id" xmi:type="uml:DataType" name="列表<公众号项>"/>
+		<packagedElement xmi:id="数字_id" xmi:type="uml:DataType" name="数字"/>
+		<packagedElement xmi:id="图片_id" xmi:type="uml:DataType" name="图片"/>
+		<packagedElement xmi:id="文本_id" xmi:type="uml:DataType" name="文本"/>
+		<packagedElement xmi:id="列表项_id" xmi:type="uml:DataType" name="列表项"/>
+		<packagedElement xmi:id="开关按钮_id" xmi:type="uml:DataType" name="开关按钮"/>
+		<packagedElement xmi:id="滚动视图_id" xmi:type="uml:DataType" name="滚动视图"/>
+	</uml:Model>
+</xmi:XMI>
