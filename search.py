@@ -3,8 +3,6 @@ import re
 import codecs
 import os
 
-# global tag_packagedElement
-# global tag_ownedAttribute_print_print,tag_ownedAttribute_xpath
 separator1 = "    "
 separator2 = "        "
 separator3 = "            "
@@ -76,39 +74,5 @@ try:
                     print separator2+ret2.group(2)+"_"+ret6_1.group(2)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 finally:
     file_object.close()
-"""
-if( len(re.findall(pattern4,each_text)) > 0 ):
-    tag_packagedElement = 0
-"""
-
-"""
-        if  tag_packagedElement > 0 :
-            ret2 = re.findall(pattern3,each_text)
-            if len(ret2) > 0:
-                print "    "+page+"_"+ret2[0][3]
-                unicode_file.write("    "+page+"_"+ret2[0][3]+"\n")
-
-
-        ret = re.findall(pattern2, each_text)  #pattern2 for Class1
-        if len(ret) > 0:
-            print ret[0][3]
-            unicode_file.write(ret[0][3]+'\n')
-"""
