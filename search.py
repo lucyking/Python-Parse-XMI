@@ -1,9 +1,9 @@
 # coding=utf-8
+import os
 import re
 import codecs
-import os
-from os.path import basename, isdir
 from os import listdir
+from os.path import basename, isdir
 
 
 def trans(fullname):
@@ -18,7 +18,7 @@ def trans(fullname):
 
     connector2 = "_"
     # 易信App登陆页_帐号输入框
-    #            ^
+    #             ^
 
     resault = "Init String"
     tag_packagedElement = 0
@@ -37,7 +37,7 @@ def trans(fullname):
             if ret:
                 file = ret.group(1)
                 prefix = dirname + "\\" + file + connector1
-                print ">>>" + prefix
+                #print ">>>" + prefix
 
             # init output files
             Business_file = codecs.open(prefix + 'Business.txt', 'w')
