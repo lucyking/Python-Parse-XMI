@@ -2,9 +2,11 @@
 import re
 import codecs
 import os
+import sys
+import view
 
 separator1 = "    "
-separator2 = "        "
+separator2 = "    "
 separator3 = "            "
 tag_packagedElement = 0
 tag_ownedOperation_print=0
@@ -13,18 +15,25 @@ tag_ownedAttribute_xpath = 0
 
 resault = "Init String"
 
-file_object = codecs.open('yixinapp.xmi', 'rb')
+file_object = codecs.open('WEB.xmi', 'rb')
+
 try:
-    unicode_file = codecs.open('KeywordList.txt', 'w')
+
+    Business_file = codecs.open('Business.txt','w')
+    UIElement_file = codecs.open('UIElement.txt','w')
+    KeywordMap_file = codecs.open('KeywordMap.txt', 'w')
+
     for each_text in file_object:
-        ret1_1 = re.search("<packagedElement", each_text)  # pattern1 for Mode1
+        ret1_1 = re.search("<packagedElement", each_text)  # <packagedElement  Begin
         if ret1_1:
             tag_packagedElement = 1
             tag_ownedAttribute_print = 1
             tag_ownedOperation_print = 1
-            ret2 = re.search(r"(name=\")(\S+)(\".+)", each_text)  # pattern1 for Mode1
+            ret2 = re.search(r"(name=\")(\S+)(\".+)", each_text)
             if ret2:
-                print  ret2.group(2)
+                resault = ret2.group(2)
+                print  resault
+                KeywordMap_file.write(resault+"\n")
                 # print tag_packagedElement
 
         ret1_2 = re.search(r"</packagedElement>", each_text)
@@ -35,7 +44,9 @@ try:
             ret3 = re.search("<ownedAttribute", each_text)
             if ret3:
                 if (tag_ownedAttribute_print == 1):
-                    print  separator1+"ownedAttribute:"
+                    resault =  separator1+"ownedAttribute:"
+                    print resault
+                    KeywordMap_file.write(resault+"\n")
                     tag_ownedAttribute_print = 0
 
                 ret4 = re.search(r"(name=\")(\S+)(\".+)", each_text)
@@ -46,13 +57,16 @@ try:
                         tag_ownedAttribute_xpath = 0
                         resault = separator2+ ret2.group(2) + "_" + ret4.group(2)
                         print resault
+                        KeywordMap_file.write(resault+"\n")
+                        UIElement_file.write(resault+"\n")
                     else:
                         if ret4_2:
                             tag_ownedAttribute_xpath = 1
                             resault = separator2+ ret2.group(2) + "_" + ret4.group(2)
                         else:
                             # if  the XMI syntax is wrong , report it
-                            print "ownedAttribute ending with  illegal syntax, not with \" /> or > \"  "
+                            print "ownedAttribute ending " \
+                                  "with illegal syntax, not with \" /> or > \"  "
                             break
 
 
@@ -62,17 +76,30 @@ try:
                 if ret5:
                     resault = resault+separator1+ret5.group(2)
                     print resault
+                    KeywordMap_file.write(resault+"\n")
+                    UIElement_file.write(resault+"\n")
                     tag_ownedAttribute_xpath = 0
 
             ret6 = re.search("<ownedOperation", each_text)
             if ret6:
                 if(tag_ownedOperation_print==1):
-                    print separator1+"ownedOperation:"
+                    resault = separator1+"ownedOperation:"
+                    print resault
+                    KeywordMap_file.write(resault+"\n")
                     tag_ownedOperation_print = 0
                 ret6_1 = re.search(r"(name=\")(\S+)(\".+)", each_text)
                 if ret6_1:
-                    print separator2+ret2.group(2)+"_"+ret6_1.group(2)
+                    resault = separator2+ret2.group(2)+"_"+ret6_1.group(2)
+                    print resault
+                    KeywordMap_file.write(resault+"\n")
+                    Business_file.write(resault+"\n")
+
+    Business_file.close()
+    UIElement_file.close()
+    KeywordMap_file.close()
 
 
 finally:
     file_object.close()
+
+
