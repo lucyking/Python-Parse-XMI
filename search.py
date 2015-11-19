@@ -13,12 +13,12 @@ def trans(fullname):
     separator3 = "            "
 
     connector1 = "-"
-    # app.xmi -->  app-UIElement.txt | app-Business.txt
+    # kkk.xmi -->  kkk-UIElement.txt | kkk-Business.txt
     #                 ^                   ^
 
     connector2 = "_"
-    # 易信App登陆页_帐号输入框
-    #             ^
+    # UIElement_Business
+    #          ^
 
     resault = "Init String"
     tag_packagedElement = 0
