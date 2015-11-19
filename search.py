@@ -18,7 +18,7 @@ def trans(fullname):
 
     connector2 = "_"
     # 易信App登陆页_帐号输入框
-    #              ^
+    #            ^
 
     resault = "Init String"
     tag_packagedElement = 0
