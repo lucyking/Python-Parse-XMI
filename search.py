@@ -14,11 +14,11 @@ def trans(fullname):
 
     connector1 = "-"
     # app.xmi -->  app-UIElement.txt | app-Business.txt
-    #                            ^                              ^
+    #                 ^                   ^
 
     connector2 = "_"
     # 易信App登陆页_帐号输入框
-    #                      ^
+    #              ^
 
     resault = "Init String"
     tag_packagedElement = 0
