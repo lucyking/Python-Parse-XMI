@@ -41,7 +41,11 @@ def trans(fullname):
             if ret:
                 file = ret.group(1)
                 prefix = dirname + "\\" + file + connector1
+<<<<<<< HEAD
                 # print ">>>" + prefix
+=======
+                #print ">>>" + prefix
+>>>>>>> efefb34e2a84ada45ff9f9828757310cce961900
 
             # init output files
             Business_file = codecs.open(prefix + filename1, 'w')
