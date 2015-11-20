@@ -1,9 +1,9 @@
 # coding=utf-8
+import os
 import re
 import codecs
-import os
-from os.path import basename, isdir
 from os import listdir
+from os.path import basename, isdir
 
 
 def trans(fullname):
@@ -12,13 +12,17 @@ def trans(fullname):
     separator2 = "    "
     separator3 = "            "
 
+    filename1 = 'Business_auto.txt'
+    filename2 = 'UIElement_auto.txt'
+    filename3 = 'KeywordMap_auto.txt'
+
     connector1 = "-"
-    # app.xmi -->  app-UIElement.txt | app-Business.txt
-    #                            ^                              ^
+    # kkk.xmi -->  kkk-UIElement.txt | kkk-Business.txt
+    #                 ^                   ^
 
     connector2 = "_"
-    # 易信App登陆页_帐号输入框
-    #                      ^
+    # UIElement_Business
+    #          ^
 
     resault = "Init String"
     tag_packagedElement = 0
@@ -37,12 +41,12 @@ def trans(fullname):
             if ret:
                 file = ret.group(1)
                 prefix = dirname + "\\" + file + connector1
-                print ">>>" + prefix
+                # print ">>>" + prefix
 
             # init output files
-            Business_file = codecs.open(prefix + 'Business.txt', 'w')
-            UIElement_file = codecs.open(prefix + 'UIElement.txt', 'w')
-            KeywordMap_file = codecs.open(prefix + 'KeywordMap.txt', 'w')
+            Business_file = codecs.open(prefix + filename1, 'w')
+            UIElement_file = codecs.open(prefix + filename2, 'w')
+            KeywordMap_file = codecs.open(prefix + filename3, 'w')
 
             for each_text in file_object:
                 # <packagedElement start
